@@ -12,3 +12,4 @@ vim.opt.expandtab = true
 vim.cmd.syntax('on')
 vim.cmd.set('number')
 vim.cmd.set('cursorline')
+vim.cmd.colorscheme('habamax')
