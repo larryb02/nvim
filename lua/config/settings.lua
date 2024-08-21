@@ -13,3 +13,8 @@ vim.cmd.syntax('on')
 vim.cmd.set('number')
 vim.cmd.set('cursorline')
 --vim.cmd.colorscheme('habamax')
+-- vim.api.nvim_create_autocmd("FileType", {
+--     pattern = { "c", "cpp" },
+--     command = "setlocal commentstring=//\\ $s"
+-- })
+
