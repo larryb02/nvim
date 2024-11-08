@@ -24,6 +24,9 @@ return
                     "lua_ls",
                     "ansiblels",
                     "pyright",
+                    "cmake",
+                    "ts_ls",
+                    -- "java_language_server"
                 },
 
                 handlers = {
@@ -39,6 +42,14 @@ return
                                         globals = { "vim", },
                                     }
                                 }
+                            }
+                        }
+                    end,
+                    ["clangd"] = function()
+                        local lspconfig = require("lspconfig")
+                        lspconfig.clangd.setup {
+                            init_options = {
+                                compilationDatabasePath = './build'
                             }
                         }
                     end,
@@ -80,6 +91,7 @@ return
     {
         "tris203/precognition.nvim",
         opts = {},
+        enabled = false,
     },
 
     {
@@ -109,4 +121,4 @@ return
                     --     enable = false
                     -- },
 
-}
+                }
